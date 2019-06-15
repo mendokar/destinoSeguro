@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+  
+  <ion-segment color="dark" [(ngModel)]="datos">
+    <ion-segment-button value="camera">
+      <ion-icon color="primary" name="camera"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="bookmark">
+      <ion-icon color="primary" name="bookmark"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div id="maps" [ngSwitch]="datos">
+  <ion-list *ngSwitchCase="'camera'">
+    <app-take-photo></app-take-photo>
+
+  </ion-list>
+
+  <!--DATOS VETERINARIA-->
+  <ion-list *ngSwitchCase="'bookmark'">
+  </ion-list>
+    </div>
+    <div id="map"></div>
+   
+</ion-content>

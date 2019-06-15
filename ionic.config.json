@@ -1,0 +1,7 @@
+{
+  "name": "destinoSeguro",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
